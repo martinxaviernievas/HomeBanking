@@ -72,108 +72,45 @@
       <section class="formulario">
         <div class="formulario__container">
           <img
-            src="../img/status-1.png"
-            alt="Etapa uno de tres"
+            src="../img/status-2.png"
+            alt="Etapa dos de tres"
             class="formulario__etapas"
           />
-          <h2 class="formulario__titulo-texto">
-            ¡Completa los campos a continuación para crear tu cuenta corriente!
-          </h2>
-        </div>
+          <h2 class="formulario__titulo-texto">Reconocimento facial</h2>
+          <p class="formulario__texto">
+            ¡Haga clic en la imagen de abajo para realizar la captura de su
+            imagen!
+          </p>
 
-        <form class="principal__formulario" data-formulario>
-          <fieldset class="formulario__campo">
-            <label class="campo__etiqueta" for="nombre">Nombre</label>
-            <input
-              name="nombre"
-              id="nombre"
-              class="campo__completo"
-              type="text"
-              minlength="3"
-              required
-            />
-            <span class="mensaje-error"></span>
-          </fieldset>
+          <img
+            src="../img/reconocimento.png"
+            alt="Cara con ojos y una sonrisa dentro de un marco."
+            data-video-boton
+            class="formulario__imagen"
+          />
 
-          <fieldset class="formulario__campo">
-            <label class="campo__etiqueta" for="email">E-mail</label>
-            <input
-              name="email"
-              id="email"
-              class="campo__completo"
-              type="email"
-              minlength="4"
-              required
-            />
-            <span class="mensaje-error"></span>
-          </fieldset>
-          <fieldset class="formulario__campo">
-            <label class="campo__etiqueta" for="identificacion"
-              >Identificación</label
-            >
-            <input
-              name="identificacion"
-              id="identificacion"
-              class="campo__completo campo__completo--menor"
-              type="text"
-              required
-            />
-            <span class="mensaje-error"></span>
-          </fieldset>
-          <fieldset class="formulario__campo">
-            <label class="campo__etiqueta" for="cuil"
-              >CUIL/CUIT (Solo números)</label
-            >
-            <input
-              name="cuil"
-              id="cuil"
-              class="campo__completo campo__completo--menor"
-              type="text"
-              minlength="11"
-              maxlength="13"
-              pattern="\d{2}-?\d{8}-?\d{1}"
-              required
-            />
-            <span class="mensaje-error"></span>
-          </fieldset>
-          <fieldset class="formulario__campo">
-            <label class="campo__etiqueta" for="fecha_nacimiento">
-              Fecha de nacimiento
-            </label>
-            <input
-              name="fecha_nacimiento"
-              id="fecha_nacimiento"
-              class="campo__completo campo__completo--menor"
-              type="date"
-              required
-            />
-            <span class="mensaje-error"></span>
-          </fieldset>
-          <fieldset class="formulario__terminos">
-            <input
-              name="terminos"
-              class="terminos__input"
-              type="checkbox"
-              required
-            />
-            <p class="terminos__texto">
-              He leído y conozco las condiciones para el tratamiento de mis
-              datos descrito en las <a href="#">Políticas de Privacidad</a>.
-            </p>
-            <span class="mensaje-error"></span>
-          </fieldset>
-
-          <div>
-            <input
-              value="Siguiente"
-              class="formulario__boton"
-              id="enviar"
-              data-boton-enviar
-              type="submit"
-            />
-            <span class="mensaje-error"></span>
+          <div class="formulario__camera" data-camera>
+            <video width="320" height="240" autoplay data-video></video>
+            <button class="camera__boton" data-tomar-foto>Tomar foto</button>
           </div>
-        </form>
+
+          <div class="formulario__mensaje" data-mensaje>
+            <canvas width="320" height="240" data-video-canvas></canvas>
+            <img
+              src="../img/icon_check.png"
+              alt="Ícono de validación"
+              class="formulario__imagen"
+            />
+            <p>¡Eso es, imagen capturada!</p>
+
+            <a
+              href="#"
+              class="formulario__boton formulario__boton--enlace"
+              data-enviar
+              >¡Quiero abrir mi cuenta!</a
+            >
+          </div>
+        </div>
       </section>
     </main>
 
@@ -233,6 +170,7 @@
         </h2>
       </section>
     </footer>
-    <script src="../js/main.js" type="module"></script>
+    <!-- Paso 2 -->
+    <script src="../js/camera.js"></script>
   </body>
 </html>
